@@ -31,24 +31,24 @@ class TriviaViewController: UIViewController {
   }
 
     private func fetchTriviaQuestions() {
-        let apiUrl = URL(string: "https://opentdb.com/api.php?amount=10")!
-        let task = URLSession.shared.dataTask(with: apiUrl) { data, response, error in
-            guard error == nil else {
-                assertionFailure("Error: \(error!.localizedDescription)")
-                return
-            }
-            guard let httpResponse = response as? HTTPURLResponse else {
-                assertionFailure("Error: \(error!.localizedDescription)")
-                return
-            }
-            guard let data = data, httpResponse.statusCode == 200 else {
-              assertionFailure("Invalid response status code: \(httpResponse.statusCode)")
-              return
-            }
-            
-            print(data)
-            task.resume()
-        }
+//        let apiUrl = URL(string: "https://opentdb.com/api.php?amount=10")!
+//        let task = URLSession.shared.dataTask(with: apiUrl) { data, response, error in
+//            guard error == nil else {
+//                assertionFailure("Error: \(error!.localizedDescription)")
+//                return
+//            }
+//            guard let httpResponse = response as? HTTPURLResponse else {
+//                assertionFailure("Error: \(error!.localizedDescription)")
+//                return
+//            }
+//            guard let data = data, httpResponse.statusCode == 200 else {
+//              assertionFailure("Invalid response status code: \(httpResponse.statusCode)")
+//              return
+//            }
+//            
+//            print(data)
+//            task.resume()
+//        }
     }
     
   struct TriviaData: Codable {
